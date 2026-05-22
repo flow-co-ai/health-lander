@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Company — The Marketing Department Your Practice Never Built</title>
+  <meta name="description" content="An embedded internal marketing department for owner-led healthcare practices. Specialists in their lanes, one integrated strategy.">
+
+  <!-- ============================================
+       WORDPRESS PASTE INSTRUCTIONS
+       ============================================
+       Option A: Create a blank page, switch to Code Editor,
+       paste this entire file.
+
+       Option B (Custom HTML block): Copy everything between
+       <!-- COPY FROM HERE --> and <!-- END COPY --> below.
+       ============================================ -->
+
+  <!-- COPY FROM HERE -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       FLOW COMPANY — HEALTHCARE LANDER
+       Cream paper · sage ink · yellow highlighter
+       ============================================ */
+
+    .fc-lp * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .fc-lp {
+      /* Brand */
+      --green:        #929b69;
+      --green-deep:   #6f7651;
+      --green-soft:   #aab285;
+      --cream:        #edebdf;
+      --cream-2:      #e3e0d0;
+      --paper:        #fcfbf6;
+      --yellow:       #f2ed84;
+      --yellow-soft:  #f7f3b0;
+      --ink:          #1a1a17;
+      --ink-soft:     #4a4a40;
+      --ink-mute:     #7c7c70;
+      --line:         #d5d2c1;
+      --line-soft:    #e3e0d0;
+      --white:        #ffffff;
+
+      /* Typography */
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Layout */
+      --container:    1180px;
+      --gutter:       clamp(20px, 4vw, 48px);
+
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.55;
+      letter-spacing: -0.005em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    .fc-lp .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    .fc-lp .eyebrow {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fc-lp .eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--green);
+    }
+
+    .fc-lp h1, .fc-lp h2, .fc-lp h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+      font-variation-settings: "SOFT" 30;
+      color: var(--ink);
+    }
+
+    .fc-lp .italic {
+      font-style: italic;
+      font-variation-settings: "SOFT" 80;
+      color: var(--green-deep);
+    }
+
+    /* ============================================
+       HIGHLIGHTER MARK
+       ============================================ */
+    .fc-lp .mark {
+      position: relative;
+      display: inline;
+      background-image: linear-gradient(180deg,
+        transparent 0%, transparent 55%,
+        var(--yellow) 55%, var(--yellow) 96%,
+        transparent 96%);
+      background-repeat: no-repeat;
+      background-size: 0% 100%;
+      background-position: 0 0;
+      padding: 0 4px;
+      margin: 0 -4px;
+      transition: background-size 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.25s;
+    }
+    .fc-lp .mark.in { background-size: 100% 100%; }
+
+    /* For dark green sections, highlight reads against green */
+    .fc-lp .section-green .mark {
+      background-image: linear-gradient(180deg,
+        transparent 0%, transparent 55%,
+        var(--yellow) 55%, var(--yellow) 96%,
+        transparent 96%);
+    }
+
+    /* ============================================
+       NAV
+       ============================================ */
+    .fc-lp .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 20px 0;
+      background: rgba(237, 235, 223, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .fc-lp .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .fc-lp .logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .fc-lp .logo img {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+    .fc-lp .nav-cta {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 10px 22px;
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+    .fc-lp .nav-cta:hover {
+      background: var(--green-deep);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .fc-lp .btn-group {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+    .fc-lp .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 32px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      border: none;
+    }
+    .fc-lp .btn-primary {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .fc-lp .btn-primary:hover {
+      background: var(--green-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -10px rgba(146,155,105,0.5);
+    }
+    .fc-lp .btn-primary .arrow {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fc-lp .btn-primary:hover .arrow { transform: translateX(4px); }
+
+    .fc-lp .section-green .btn-primary {
+      background: var(--cream);
+      color: var(--ink);
+    }
+    .fc-lp .section-green .btn-primary:hover {
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .fc-lp .btn-meta {
+      font-size: 13px;
+      color: var(--ink-mute);
+    }
+    .fc-lp .section-green .btn-meta { color: var(--cream-2); }
+
+    /* ============================================
+       SECTION SYSTEM
+       ============================================ */
+    .fc-lp section {
+      padding: clamp(80px, 12vh, 140px) 0;
+      position: relative;
+    }
+    .fc-lp .section-white { background: var(--paper); }
+    .fc-lp .section-green {
+      background: var(--green);
+      color: var(--cream);
+    }
+    .fc-lp .section-green h1,
+    .fc-lp .section-green h2,
+    .fc-lp .section-green h3,
+    .fc-lp .section-green h4 { color: var(--cream); }
+    .fc-lp .section-green .eyebrow { color: var(--yellow); }
+    .fc-lp .section-green .eyebrow::before { background: var(--yellow); }
+    .fc-lp .section-green .italic { color: var(--yellow); }
+
+    .fc-lp .section-head {
+      max-width: 780px;
+      margin-bottom: 72px;
+    }
+    .fc-lp .section-head h2 {
+      font-size: clamp(36px, 5vw, 64px);
+      margin: 24px 0 24px;
+      max-width: 18ch;
+    }
+    .fc-lp .section-head p {
+      font-size: clamp(16px, 1.4vw, 19px);
+      color: var(--ink-soft);
+      max-width: 54ch;
+    }
+    .fc-lp .section-green .section-head p { color: var(--cream-2); }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .fc-lp .hero {
+      padding: clamp(60px, 10vh, 110px) 0 clamp(80px, 12vh, 140px);
+      position: relative;
+      overflow: hidden;
+    }
+    .fc-lp .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; right: -260px;
+      transform: translateY(-50%);
+      width: 720px; height: 720px;
+      background: radial-gradient(circle, rgba(146,155,105,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .fc-lp .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 56px;
+      position: relative;
+    }
+    @media (min-width: 900px) {
+      .fc-lp .hero-grid { grid-template-columns: 1.45fr 1fr; align-items: end; gap: 72px; }
+    }
+    .fc-lp .hero h1 {
+      font-size: clamp(46px, 7.4vw, 96px);
+      margin: 30px 0 32px;
+      max-width: 13ch;
+    }
+    .fc-lp .hero p.lede {
+      font-size: clamp(17px, 1.6vw, 20px);
+      color: var(--ink-soft);
+      max-width: 52ch;
+      line-height: 1.55;
+    }
+    .fc-lp .hero-side {
+      border-left: 1px solid var(--line);
+      padding-left: 32px;
+    }
+    .fc-lp .hero-side .stat-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-deep);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .fc-lp .hero-side .stat-line {
+      font-family: var(--font-display);
+      font-size: 17px;
+      color: var(--ink);
+      line-height: 1.45;
+      margin-bottom: 24px;
+    }
+    .fc-lp .hero-side .stat-line:last-child { margin-bottom: 0; }
+    .fc-lp .hero-side .stat-line .italic {
+      color: var(--green-deep);
+    }
+
+    /* ============================================
+       PROBLEM
+       ============================================ */
+    .fc-lp .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    @media (min-width: 800px) {
+      .fc-lp .problem-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .fc-lp .problem-item {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      position: relative;
+    }
+    @media (min-width: 800px) {
+      .fc-lp .problem-item { padding: 0 40px; border-top: none; border-left: 1px solid var(--line); }
+      .fc-lp .problem-item:first-child { border-left: none; padding-left: 0; }
+      .fc-lp .problem-item:last-child { padding-right: 0; }
+    }
+    .fc-lp .problem-item .num {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--green-deep);
+      margin-bottom: 18px;
+      font-variation-settings: "SOFT" 80;
+    }
+    .fc-lp .problem-item h3 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .fc-lp .problem-item p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       MECHANISM
+       ============================================ */
+    .fc-lp .mech-compare {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    @media (min-width: 900px) {
+      .fc-lp .mech-compare { grid-template-columns: 1fr 1fr; }
+    }
+    .fc-lp .mech-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 36px 32px;
+      background: var(--paper);
+      position: relative;
+    }
+    .fc-lp .mech-card.good {
+      background: linear-gradient(180deg, rgba(146,155,105,0.08) 0%, var(--paper) 100%);
+      border-color: var(--green-soft);
+    }
+    .fc-lp .mech-card .label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: var(--ink-mute);
+      font-weight: 600;
+    }
+    .fc-lp .mech-card.good .label { color: var(--green-deep); }
+    .fc-lp .mech-card h3 {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+    .fc-lp .mech-diagram {
+      height: 220px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .fc-lp .mech-diagram svg { width: 100%; height: 100%; display: block; overflow: visible; }
+    .fc-lp .mech-card ul { list-style: none; padding: 0; }
+    .fc-lp .mech-card li {
+      padding: 12px 0;
+      color: var(--ink-soft);
+      font-size: 15px;
+      border-top: 1px solid var(--line-soft);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .fc-lp .mech-card li:first-child { border-top: none; padding-top: 0; }
+    .fc-lp .mech-card li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--ink-mute);
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+    .fc-lp .mech-card.good li::before { background: var(--green); }
+
+    /* SVG draw animation */
+    .fc-lp .draw-line {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      transition: stroke-dashoffset 1.4s ease-out;
+    }
+    .fc-lp .mech-card.in .draw-line { stroke-dashoffset: 0; }
+    .fc-lp .draw-node {
+      opacity: 0;
+      transform: scale(0.4);
+      transform-origin: center;
+      transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .fc-lp .mech-card.in .draw-node { opacity: 1; transform: scale(1); }
+    .fc-lp .mech-card.in .draw-node:nth-child(2) { transition-delay: 0.1s; }
+    .fc-lp .mech-card.in .draw-node:nth-child(3) { transition-delay: 0.2s; }
+    .fc-lp .mech-card.in .draw-node:nth-child(4) { transition-delay: 0.3s; }
+    .fc-lp .mech-card.in .draw-node:nth-child(5) { transition-delay: 0.4s; }
+    .fc-lp .mech-card.in .draw-node:nth-child(6) { transition-delay: 0.5s; }
+    .fc-lp .mech-card.in .draw-node:nth-child(7) { transition-delay: 0.6s; }
+
+    /* ============================================
+       LANES
+       ============================================ */
+    .fc-lp .lanes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    @media (min-width: 800px) {
+      .fc-lp .lanes { grid-template-columns: repeat(4, 1fr); }
+    }
+    .fc-lp .lane {
+      background: var(--paper);
+      padding: 30px 26px;
+      transition: background 0.3s ease;
+    }
+    .fc-lp .lane:hover { background: var(--cream); }
+    .fc-lp .lane .lane-num {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--green-deep);
+      margin-bottom: 16px;
+      display: block;
+      font-variation-settings: "SOFT" 80;
+    }
+    .fc-lp .lane h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+    }
+    .fc-lp .lane p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* ============================================
+       OUTCOMES (GREEN SECTION)
+       ============================================ */
+    .fc-lp .outcomes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 56px;
+    }
+    @media (min-width: 800px) {
+      .fc-lp .outcomes-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .fc-lp .outcome {
+      padding: 36px 32px;
+      border: 1px solid rgba(237, 235, 223, 0.2);
+      border-radius: 16px;
+      background: rgba(237, 235, 223, 0.05);
+      position: relative;
+      backdrop-filter: blur(4px);
+    }
+    .fc-lp .outcome .ico {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--ink);
+    }
+    .fc-lp .outcome h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .fc-lp .outcome p {
+      color: var(--cream-2);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       PROOF
+       ============================================ */
+    .fc-lp .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 800px) {
+      .fc-lp .proof-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .fc-lp .proof-card {
+      padding: 36px 32px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fc-lp .proof-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(146,155,105,0.3);
+    }
+    .fc-lp .proof-card .vert {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--green-deep);
+      margin-bottom: 28px;
+      font-weight: 600;
+    }
+    .fc-lp .proof-card .figure {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1;
+      color: var(--ink);
+      margin-bottom: 10px;
+      letter-spacing: -0.04em;
+      font-weight: 400;
+    }
+    .fc-lp .proof-card .figure-sub {
+      font-size: 13px;
+      color: var(--ink-mute);
+      margin-bottom: 28px;
+    }
+    .fc-lp .proof-card p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      padding-top: 24px;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    /* ============================================
+       PROCESS
+       ============================================ */
+    .fc-lp .process-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .fc-lp .process-step {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 44px 0;
+      border-top: 1px solid var(--line);
+      transition: padding 0.3s ease;
+    }
+    .fc-lp .process-step:last-child { border-bottom: 1px solid var(--line); }
+    .fc-lp .process-step:hover { padding-left: 12px; }
+    @media (min-width: 800px) {
+      .fc-lp .process-step {
+        grid-template-columns: 110px 1fr 2fr;
+        gap: 40px;
+        align-items: start;
+      }
+    }
+    .fc-lp .process-step .step-num {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-style: italic;
+      color: var(--green);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      font-variation-settings: "SOFT" 80;
+    }
+    .fc-lp .process-step h3 {
+      font-size: 30px;
+      max-width: 14ch;
+    }
+    .fc-lp .process-step p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    /* ============================================
+       WHO
+       ============================================ */
+    .fc-lp .who-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 700px) {
+      .fc-lp .who-list { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1000px) {
+      .fc-lp .who-list { grid-template-columns: repeat(5, 1fr); }
+    }
+    .fc-lp .who-item {
+      background: var(--paper);
+      padding: 34px 24px;
+      transition: background 0.3s ease;
+    }
+    .fc-lp .who-item:hover { background: var(--yellow-soft); }
+    .fc-lp .who-item h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 19px;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+    }
+    .fc-lp .who-not {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      max-width: 760px;
+    }
+    .fc-lp .who-not .label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .fc-lp .who-not p {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--ink);
+      line-height: 1.45;
+      letter-spacing: -0.015em;
+    }
+
+    /* ============================================
+       FAQ
+       ============================================ */
+    .fc-lp .faq-list { max-width: 920px; }
+    .fc-lp .faq-item {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      cursor: pointer;
+      transition: padding 0.3s ease;
+    }
+    .fc-lp .faq-item:last-child { border-bottom: 1px solid var(--line); }
+    .fc-lp .faq-item:hover { padding-left: 8px; }
+    .fc-lp .faq-item summary {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.2vw, 27px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      cursor: pointer;
+      transition: color 0.25s ease;
+    }
+    .fc-lp .faq-item summary::-webkit-details-marker { display: none; }
+    .fc-lp .faq-item .toggle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--ink-soft);
+      background: var(--paper);
+    }
+    .fc-lp .faq-item[open] .toggle {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      transform: rotate(45deg);
+      color: var(--ink);
+    }
+    .fc-lp .faq-item .answer {
+      margin-top: 20px;
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 64ch;
+    }
+    .fc-lp .faq-item:hover summary { color: var(--green-deep); }
+
+    /* ============================================
+       FINAL CTA (GREEN)
+       ============================================ */
+    .fc-lp .final {
+      padding: clamp(100px, 16vh, 180px) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .fc-lp .final::before {
+      content: '';
+      position: absolute;
+      top: -300px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(242,237,132,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .fc-lp .final-inner { position: relative; max-width: 920px; }
+    .fc-lp .final h2 {
+      font-size: clamp(42px, 6vw, 78px);
+      margin: 30px 0 32px;
+      max-width: 18ch;
+    }
+    .fc-lp .final p {
+      font-size: clamp(17px, 1.5vw, 20px);
+      color: var(--cream-2);
+      max-width: 56ch;
+      margin-bottom: 40px;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .fc-lp .footer {
+      padding: 56px 0 64px;
+      background: var(--cream);
+      border-top: 1px solid var(--line-soft);
+    }
+    .fc-lp .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--ink-mute);
+    }
+    .fc-lp .footer a {
+      color: var(--ink-mute);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .fc-lp .footer a:hover { color: var(--green-deep); }
+    .fc-lp .footer .footer-logo {
+      height: 28px;
+      width: auto;
+      opacity: 0.7;
+    }
+
+    /* ============================================
+       SCROLL REVEAL
+       ============================================ */
+    @media (prefers-reduced-motion: no-preference) {
+      .fc-lp .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .fc-lp .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .fc-lp .stagger > * {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .fc-lp .stagger.in > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+      .fc-lp .stagger.in > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+      .fc-lp .stagger.in > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+      .fc-lp .stagger.in > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+      .fc-lp .stagger.in > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+      .fc-lp .stagger.in > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+      .fc-lp .stagger.in > *:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+    }
+  </style>
+
+  <div class="fc-lp">
+
+    <!-- ============================================ NAV ============================================ -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <a href="#" class="logo">
+          <!-- Swap src with your WordPress media library URL if hosting a fresher version -->
+          <img src="https://flowco.ai/wp-content/uploads/2025/05/Flow-Co.-Logo-2.png" alt="Flow Company">
+        </a>
+        <a href="https://start.flowco.ai/book/" class="nav-cta">Book a call</a>
+      </div>
+    </header>
+
+    <!-- ============================================ HERO ============================================ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="eyebrow">For owner-led healthcare practices</span>
+            <h1>The marketing department your practice <span class="mark">never built</span>.</h1>
+            <p class="lede">Predictable patient growth from a fully embedded team — without <span class="mark">juggling five freelancers</span> who don't talk to each other.</p>
+
+            <div class="btn-group">
+              <a href="https://start.flowco.ai/book/" class="btn btn-primary">
+                Book a strategy call
+                <span class="arrow">→</span>
+              </a>
+              <span class="btn-meta">30 minutes. Diagnostic, not pitch.</span>
+            </div>
+          </div>
+
+          <aside class="hero-side reveal">
+            <div class="stat-label">What we replace</div>
+            <p class="stat-line">The <span class="italic">media buyer</span> who doesn't know what the SEO contractor is doing.</p>
+            <p class="stat-line">The <span class="italic">content person</span> producing assets nothing else uses.</p>
+            <p class="stat-line">The <span class="italic">CRM</span> nobody owns, so follow-up falls through.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ PROBLEM (WHITE) ============================================ -->
+    <section class="section-white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The diagnosis</span>
+          <h2>Where marketing dollars <span class="mark">actually leak</span>.</h2>
+          <p>It usually isn't the campaigns. It's the gaps between them. Three places to look first.</p>
+        </div>
+
+        <div class="problem-grid stagger">
+          <div class="problem-item">
+            <div class="num">01 — Disconnection</div>
+            <h3>Specialists in silos.</h3>
+            <p>Each freelancer optimizes for their own scope. The media buyer doesn't know what the SEO contractor is building. The web developer doesn't see the campaigns the site has to convert. No one is responsible for the system as a whole.</p>
+          </div>
+          <div class="problem-item">
+            <div class="num">02 — Fragmentation</div>
+            <h3>Five strategies, none aligned.</h3>
+            <p>Every vendor has their own playbook running in parallel. Individual campaigns may even work — but they never compound. Marketing produces activity, not a revenue engine.</p>
+          </div>
+          <div class="problem-item">
+            <div class="num">03 — Operational gaps</div>
+            <h3>Leads come in. Revenue doesn't.</h3>
+            <p>The CRM isn't connected to the ad platform. The booking flow doesn't sync. Follow-up breaks at the handoff. You're paying to generate leads that quietly die in the cracks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ MECHANISM ============================================ -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The mechanism</span>
+          <h2>How an <span class="mark">embedded marketing department</span> actually works.</h2>
+          <p>Same specialists you'd hire anyway. The difference is what sits between them.</p>
+        </div>
+
+        <div class="mech-compare">
+          <!-- BAD CARD -->
+          <div class="mech-card reveal">
+            <div class="label">What most practices have</div>
+            <h3>Five freelancers, no system.</h3>
+            <div class="mech-diagram">
+              <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Disconnected lines (drawn) -->
+                <line class="draw-line" x1="184" y1="100" x2="74" y2="50" stroke="#aab285" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>
+                <line class="draw-line" x1="216" y1="100" x2="326" y2="46" stroke="#aab285" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>
+                <line class="draw-line" x1="184" y1="120" x2="66" y2="168" stroke="#aab285" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>
+                <line class="draw-line" x1="216" y1="120" x2="334" y2="173" stroke="#aab285" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>
+                <line class="draw-line" x1="200" y1="132" x2="200" y2="184" stroke="#aab285" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>
+
+                <!-- Practice node center -->
+                <g class="draw-node">
+                  <circle cx="200" cy="110" r="26" fill="#edebdf" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="200" y="114" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="10" fill="#1a1a17" font-weight="600">Practice</text>
+                </g>
+                <!-- Disconnected nodes -->
+                <g class="draw-node">
+                  <circle cx="60" cy="40" r="18" fill="#fcfbf6" stroke="#d5d2c1" stroke-width="1"/>
+                  <text x="60" y="44" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#4a4a40">Media</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="340" cy="35" r="18" fill="#fcfbf6" stroke="#d5d2c1" stroke-width="1"/>
+                  <text x="340" y="39" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#4a4a40">Web</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="50" cy="180" r="18" fill="#fcfbf6" stroke="#d5d2c1" stroke-width="1"/>
+                  <text x="50" y="184" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#4a4a40">SEO</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="350" cy="185" r="18" fill="#fcfbf6" stroke="#d5d2c1" stroke-width="1"/>
+                  <text x="350" y="189" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#4a4a40">CRM</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="200" cy="200" r="18" fill="#fcfbf6" stroke="#d5d2c1" stroke-width="1"/>
+                  <text x="200" y="204" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#4a4a40">Content</text>
+                </g>
+              </svg>
+            </div>
+            <ul>
+              <li>You're the integrator. Five conversations, five reports, zero alignment.</li>
+              <li>No one owns the system. Everyone owns their slice.</li>
+              <li>When something breaks, no one's accountable for the gap.</li>
+            </ul>
+          </div>
+
+          <!-- GOOD CARD -->
+          <div class="mech-card good reveal">
+            <div class="label">What we install</div>
+            <h3>One integrated team. One strategy.</h3>
+            <div class="mech-diagram">
+              <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Drawn ring -->
+                <circle class="draw-line" cx="200" cy="110" r="75" fill="none" stroke="#929b69" stroke-width="1.5" stroke-dasharray="500" opacity="0.55"/>
+                <!-- Center node -->
+                <g class="draw-node">
+                  <circle cx="200" cy="110" r="28" fill="#929b69"/>
+                  <text x="200" y="107" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" font-weight="700" fill="#edebdf">Practice</text>
+                  <text x="200" y="119" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="8" fill="#edebdf">+ Strategy</text>
+                </g>
+                <!-- Specialist nodes -->
+                <g class="draw-node">
+                  <circle cx="200" cy="35" r="18" fill="#fcfbf6" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="200" y="39" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#1a1a17" font-weight="500">Media</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="265" cy="72" r="18" fill="#fcfbf6" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="265" y="76" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#1a1a17" font-weight="500">Web</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="265" cy="148" r="18" fill="#fcfbf6" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="265" y="152" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#1a1a17" font-weight="500">CRM</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="200" cy="185" r="18" fill="#fcfbf6" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="200" y="189" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#1a1a17" font-weight="500">Content</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="135" cy="148" r="18" fill="#fcfbf6" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="135" y="152" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#1a1a17" font-weight="500">SEO</text>
+                </g>
+                <g class="draw-node">
+                  <circle cx="135" cy="72" r="18" fill="#fcfbf6" stroke="#929b69" stroke-width="1.4"/>
+                  <text x="135" y="76" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="9" fill="#1a1a17" font-weight="500">Ops</text>
+                </g>
+              </svg>
+            </div>
+            <ul>
+              <li>One strategy. Every lane reports to it. Every campaign integrates.</li>
+              <li>Operational glue between layers — CRM, traffic, content, follow-up.</li>
+              <li>One point of contact. You stop managing five vendors.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lanes -->
+        <div class="reveal">
+          <div class="section-head" style="margin-bottom: 36px;">
+            <h2 style="font-size: clamp(26px, 3vw, 38px); max-width: 26ch;">Specialists in their lanes — <span class="italic">not generalists pretending</span>.</h2>
+          </div>
+          <div class="lanes stagger">
+            <div class="lane">
+              <span class="lane-num">i.</span>
+              <h4>Traffic</h4>
+              <p>Paid ads, SEO, local search, content — built around how your specific patients actually find practices like yours.</p>
+            </div>
+            <div class="lane">
+              <span class="lane-num">ii.</span>
+              <h4>Funnels &amp; site</h4>
+              <p>Conversion-built pages, intake flows, and booking architecture that turn traffic into scheduled visits.</p>
+            </div>
+            <div class="lane">
+              <span class="lane-num">iii.</span>
+              <h4>CRM &amp; follow-up</h4>
+              <p>The pipeline, the automation, the sequences. No more leads dying between form submit and booked.</p>
+            </div>
+            <div class="lane">
+              <span class="lane-num">iv.</span>
+              <h4>Reporting &amp; ops</h4>
+              <p>Weekly visibility into what's working, what's leaking, and what the next move is. Numbers tied to revenue, not vanity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ OUTCOMES (GREEN) ============================================ -->
+    <section class="section-green">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What you actually get</span>
+          <h2>The part that matters: <span class="mark" style="color: var(--ink);">revenue you can see</span>.</h2>
+          <p>A marketing department isn't a deliverable. It's an operating layer. Here's what it produces.</p>
+        </div>
+
+        <div class="outcomes-grid stagger">
+          <div class="outcome">
+            <div class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+            </div>
+            <h3>Clarity</h3>
+            <p>You can finally see what marketing is doing and what it's producing. Numbers tied to booked patients and revenue — not impressions and vanity metrics.</p>
+          </div>
+          <div class="outcome">
+            <div class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20" stroke-linecap="round"/></svg>
+            </div>
+            <h3>A revenue engine</h3>
+            <p>Predictable input/output. Same prospect, same source, same campaigns, repeated. Pull the lever, get more output — instead of starting from scratch every quarter.</p>
+          </div>
+          <div class="outcome">
+            <div class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Your time back</h3>
+            <p>You stop being the missing strategist between disconnected vendors. You stop chasing freelancers for updates. You go back to running the practice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ PROOF ============================================ -->
+    <!--
+      ┌─────────────────────────────────────────────────────┐
+      │ PROOF SECTION — REPLACE PLACEHOLDER NUMBERS/COPY    │
+      │ data-target = number to count up to                 │
+      │ data-prefix / data-suffix / data-decimals           │
+      └─────────────────────────────────────────────────────┘
+    -->
+    <section class="section-white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Recent results</span>
+          <h2>What the system <span class="mark">produces</span>.</h2>
+          <p>Three quick snapshots from practices we've worked with. Replace these with your real numbers before going live.</p>
+        </div>
+
+        <div class="proof-grid stagger">
+          <div class="proof-card">
+            <div class="vert">Multi-location dental</div>
+            <div class="figure"><span class="count" data-target="3.2" data-decimals="1" data-suffix="×">0×</span></div>
+            <div class="figure-sub">monthly booked new-patient appointments</div>
+            <p>Before: three separate vendors, no shared reporting. After: integrated department running ads, content, and CRM under one strategy. Result inside 90 days.</p>
+          </div>
+          <div class="proof-card">
+            <div class="vert">Med spa — single location</div>
+            <div class="figure"><span class="count" data-target="47" data-prefix="$" data-suffix="K">$0K</span></div>
+            <div class="figure-sub">recovered from broken follow-up flow</div>
+            <p>Leads were arriving but dying between intake form and consult booking. Fixed the CRM handoff. Closed loop in week three. Revenue showed up by month two.</p>
+          </div>
+          <div class="proof-card">
+            <div class="vert">Chiropractic clinic</div>
+            <div class="figure"><span class="count" data-target="61" data-suffix="%">0%</span></div>
+            <div class="figure-sub">lower cost per booked patient</div>
+            <p>Same ad spend, restructured campaigns, rebuilt landing flow, connected to CRM. Acquisition cost dropped because the system finally compounded.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ PROCESS ============================================ -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>From <span class="mark">five freelancers</span> to one department, in four moves.</h2>
+        </div>
+
+        <div class="process-list">
+          <div class="process-step reveal">
+            <div class="step-num">01</div>
+            <h3>Diagnostic call</h3>
+            <p>Thirty minutes. We map your current marketing setup — what you're spending, where, and what's actually working. No pitch unless we're a fit. If we're not, you leave with a sharper picture than you came in with.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">02</div>
+            <h3>Department design</h3>
+            <p>If we're a fit, we design the exact integrated system for your practice — which specialists you need in which lanes, what the strategy is, what gets installed first. You see the plan before anything moves.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">03</div>
+            <h3>Install</h3>
+            <p>We embed. Specialists deployed in their lanes. Systems connected — CRM, traffic, content, follow-up — wired together and running as one. You stop coordinating; we run the department.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">04</div>
+            <h3>Operate &amp; compound</h3>
+            <p>Weekly reporting. Monthly optimization. The system gets sharper every cycle. This is the part most practices have never had — a marketing function that actually compounds instead of resets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ WHO ============================================ -->
+    <section class="section-white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Who we built this for</span>
+          <h2>Owner-led <span class="mark">healthcare practices</span>.</h2>
+          <p>If you're the owner doing marketing yourself — or paying someone you're not sure is helping — this is who we built it for.</p>
+        </div>
+
+        <div class="who-list reveal">
+          <div class="who-item"><h4>Dental practices</h4></div>
+          <div class="who-item"><h4>Chiropractic clinics</h4></div>
+          <div class="who-item"><h4>Med spas &amp; aesthetics</h4></div>
+          <div class="who-item"><h4>Physical therapy &amp; recovery</h4></div>
+          <div class="who-item"><h4>Functional &amp; concierge medicine</h4></div>
+        </div>
+
+        <div class="who-not reveal">
+          <div class="label">Who this isn't for</div>
+          <p>Big-box franchises with a 15-person internal team. Hospital systems. Anyone shopping for a $500/month "marketing package." We're not a freelancer — we replace five of them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ FAQ ============================================ -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Common questions</span>
+          <h2>The <span class="mark">honest answers</span> we'd give on a call anyway.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>How is this different from hiring an agency? <span class="toggle">+</span></summary>
+            <div class="answer">Most agencies hand you off to bloated account teams or chase retainers with no integration. We work as your internal department — specialists in their lanes, one strategy, accountable for the system end-to-end. The difference isn't the work; it's the operating model.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you guarantee a specific number of leads? <span class="toggle">+</span></summary>
+            <div class="answer">We don't lead with lead-volume guarantees because that's how generalist agencies commodify themselves and end up competing on price. We guarantee the system — that what gets installed actually works as one connected engine. Volume and revenue compound from there. We'll cover what realistic numbers look like for your specific situation on the call.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What does this cost? <span class="toggle">+</span></summary>
+            <div class="answer">It depends on what your practice needs and what stage you're at. We cover pricing on the strategy call once we've actually looked at your situation. Building pricing on a website before we know what you need would be the same lazy thinking we're trying to replace.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How long until we see results? <span class="toggle">+</span></summary>
+            <div class="answer">Most practices see the first system improvements (CRM clean-up, follow-up gaps closed, reporting visibility) inside the first two to three weeks. Lead volume and revenue lift typically show up in months two and three as campaigns dial in and the system starts compounding.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What if we already have an agency or freelancers? <span class="toggle">+</span></summary>
+            <div class="answer">Most of our clients did when they came to us. We start with a diagnostic. Sometimes we recommend keeping a piece of what you have. Sometimes we replace the whole stack. Either way, we're honest about it — we don't pretend a fragmented setup can be fixed when it can't.</div>
+          </details>
+          <details class="faq-item">
+            <summary>I've been burned by marketing before. <span class="toggle">+</span></summary>
+            <div class="answer">Almost everyone has. Usually it's one of three things: the strategy was generic and not customized, the service was slow and unsupported, or the operational layer was missing entirely. We'd rather diagnose what actually happened than ask you to take another leap of faith — the call is built around that conversation.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you only work with healthcare? <span class="toggle">+</span></summary>
+            <div class="answer">We specialize in owner-led healthcare and local service businesses. Outside of those, we'd rather refer you to someone better positioned than be a generalist for you. The whole point of this model is that we're not generalists.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ FINAL CTA (GREEN) ============================================ -->
+    <section class="section-green final">
+      <div class="container">
+        <div class="final-inner reveal">
+          <span class="eyebrow">Next step</span>
+          <h2>If your marketing is running through five people who <span class="mark" style="color: var(--ink);">don't talk to each other</span> — you already know what the problem is.</h2>
+          <p>Book a thirty-minute strategy call. We'll diagnose what's actually leaking in your current setup and tell you straight whether we're the right fix.</p>
+
+          <div class="btn-group">
+            <a href="https://start.flowco.ai/book/" class="btn btn-primary">
+              Book a strategy call
+              <span class="arrow">→</span>
+            </a>
+            <span class="btn-meta">Diagnostic, not pitch. No-fit calls end early.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ FOOTER ============================================ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <img class="footer-logo" src="https://flowco.ai/wp-content/uploads/2025/05/Flow-Co.-Logo-2.png" alt="Flow Company">
+          <span>© Flow Company, LLC</span>
+        </div>
+        <div>
+          <a href="https://flowco.ai/about-us/">About</a>
+          &nbsp;·&nbsp;
+          <a href="https://start.flowco.ai/book/">Book a call</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ SCRIPTS ============================================ -->
+  <script>
+    (function() {
+      // ---- Scroll reveal (for .reveal, .stagger, .mark, .mech-card) ----
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fc-lp .reveal, .fc-lp .stagger, .fc-lp .mech-card').forEach(el => io.observe(el));
+      } else {
+        document.querySelectorAll('.fc-lp .reveal, .fc-lp .stagger, .fc-lp .mech-card').forEach(el => el.classList.add('in'));
+      }
+
+      // ---- Highlighter mark sweep (slightly delayed after reveal) ----
+      if ('IntersectionObserver' in window) {
+        const markIo = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add('in'), 120);
+              markIo.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.6 });
+
+        document.querySelectorAll('.fc-lp .mark').forEach(el => markIo.observe(el));
+      } else {
+        document.querySelectorAll('.fc-lp .mark').forEach(el => el.classList.add('in'));
+      }
+
+      // ---- Number count-up on proof figures ----
+      const animateCount = (el) => {
+        const target = parseFloat(el.dataset.target);
+        const decimals = parseInt(el.dataset.decimals || '0', 10);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        const duration = 1600;
+        const start = performance.now();
+
+        const tick = (now) => {
+          const elapsed = now - start;
+          const t = Math.min(elapsed / duration, 1);
+          // ease-out cubic
+          const eased = 1 - Math.pow(1 - t, 3);
+          const value = (target * eased).toFixed(decimals);
+          el.textContent = prefix + value + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+
+      if ('IntersectionObserver' in window) {
+        const countIo = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              animateCount(e.target);
+              countIo.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.7 });
+
+        document.querySelectorAll('.fc-lp .count').forEach(el => countIo.observe(el));
+      } else {
+        document.querySelectorAll('.fc-lp .count').forEach(el => animateCount(el));
+      }
+
+      // ---- FAQ accordion: close others when one opens ----
+      document.querySelectorAll('.fc-lp .faq-item').forEach(item => {
+        item.addEventListener('toggle', function() {
+          if (this.open) {
+            document.querySelectorAll('.fc-lp .faq-item').forEach(other => {
+              if (other !== this) other.open = false;
+            });
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- END COPY -->
+
+</body>
+</html>
